@@ -270,7 +270,7 @@ function button_Salir_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 warndlg('Fin del programa')
-
+delete(hObject);
 
 % --- Executes on button press in button_TrazadorCubico.
 function button_TrazadorCubico_Callback(hObject, eventdata, handles)
