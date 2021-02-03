@@ -292,3 +292,4 @@ function button_ReglaCompuestaSimpson_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 GUI_RCS
+closereq();

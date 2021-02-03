@@ -22,7 +22,7 @@ function varargout = GUI_RCS(varargin)
 
 % Edit the above text to modify the response to help GUI_RCS
 
-% Last Modified by GUIDE v2.5 02-Feb-2021 20:29:42
+% Last Modified by GUIDE v2.5 02-Feb-2021 20:46:43
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -241,3 +241,12 @@ set(handles.d4,'String','');
 % hObject    handle to pushbutton2 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in button_Regresar.
+function button_Regresar_Callback(hObject, eventdata, handles)
+% hObject    handle to button_Regresar (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+GUI_MENU
+closereq();
