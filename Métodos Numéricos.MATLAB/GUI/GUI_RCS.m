@@ -1,35 +1,35 @@
-function varargout = GuiRCS(varargin)
-% GUIRCS MATLAB code for GuiRCS.fig
-%      GUIRCS, by itself, creates a new GUIRCS or raises the existing
+function varargout = GUI_RCS(varargin)
+% GUI_RCS MATLAB code for GUI_RCS.fig
+%      GUI_RCS, by itself, creates a new GUI_RCS or raises the existing
 %      singleton*.
 %
-%      H = GUIRCS returns the handle to a new GUIRCS or the handle to
+%      H = GUI_RCS returns the handle to a new GUI_RCS or the handle to
 %      the existing singleton*.
 %
-%      GUIRCS('CALLBACK',hObject,eventData,handles,...) calls the local
-%      function named CALLBACK in GUIRCS.M with the given input arguments.
+%      GUI_RCS('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in GUI_RCS.M with the given input arguments.
 %
-%      GUIRCS('Property','Value',...) creates a new GUIRCS or raises the
+%      GUI_RCS('Property','Value',...) creates a new GUI_RCS or raises the
 %      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before GuiRCS_OpeningFcn gets called.  An
+%      applied to the GUI before GUI_RCS_OpeningFcn gets called.  An
 %      unrecognized property name or invalid value makes property application
-%      stop.  All inputs are passed to GuiRCS_OpeningFcn via varargin.
+%      stop.  All inputs are passed to GUI_RCS_OpeningFcn via varargin.
 %
 %      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
 %      instance to run (singleton)".
 %
 % See also: GUIDE, GUIDATA, GUIHANDLES
 
-% Edit the above text to modify the response to help GuiRCS
+% Edit the above text to modify the response to help GUI_RCS
 
-% Last Modified by GUIDE v2.5 20-Feb-2020 19:09:23
+% Last Modified by GUIDE v2.5 02-Feb-2021 20:29:42
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
     'gui_Singleton',  gui_Singleton, ...
-    'gui_OpeningFcn', @GuiRCS_OpeningFcn, ...
-    'gui_OutputFcn',  @GuiRCS_OutputFcn, ...
+    'gui_OpeningFcn', @GUI_RCS_OpeningFcn, ...
+    'gui_OutputFcn',  @GUI_RCS_OutputFcn, ...
     'gui_LayoutFcn',  [] , ...
     'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -44,26 +44,26 @@ end
 % End initialization code - DO NOT EDIT
 
 
-% --- Executes just before GuiRCS is made visible.
-function GuiRCS_OpeningFcn(hObject, ~, handles, varargin)
+% --- Executes just before GUI_RCS is made visible.
+function GUI_RCS_OpeningFcn(hObject, ~, handles, varargin)
 % This function has no output args, see OutputFcn.
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to GuiRCS (see VARARGIN)
+% varargin   command line arguments to GUI_RCS (see VARARGIN)
 
-% Choose default command line output for GuiRCS
+% Choose default command line output for GUI_RCS
 handles.output = hObject;
 
 % Update handles structure
 guidata(hObject, handles);
 
-% UIWAIT makes GuiRCS wait for user response (see UIRESUME)
+% UIWAIT makes GUI_RCS wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = GuiRCS_OutputFcn(~, ~, handles)
+function varargout = GUI_RCS_OutputFcn(~, ~, handles)
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -103,8 +103,8 @@ else
     set(handles.valorH,'String',sprintf('%9.9f',h));
     
     %     if rem(n,2)==1
-    %         fprintf('\n Inv·lido valor de n!!!');
-    %         n=input('\n Record· que el valor de n tiene que ser par. ');
+    %         fprintf('\n Inv√°lido valor de n!!!');
+    %         n=input('\n Record√° que el valor de n tiene que ser par. ');
     %     end
     for k=1:1:n
         x(k)=a+k*h;
