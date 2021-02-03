@@ -22,7 +22,7 @@ function varargout = GUI_MENU(varargin)
 
 % Edit the above text to modify the response to help GUI_MENU
 
-% Last Modified by GUIDE v2.5 28-Jan-2021 21:41:25
+% Last Modified by GUIDE v2.5 02-Feb-2021 20:20:31
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -291,3 +291,4 @@ function button_ReglaCompuestaSimpson_Callback(hObject, eventdata, handles)
 % hObject    handle to button_ReglaCompuestaSimpson (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+GUI_RCS
