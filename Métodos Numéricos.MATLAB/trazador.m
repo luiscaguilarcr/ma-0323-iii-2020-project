@@ -1,7 +1,6 @@
 function [a,b,c,d]=trazador(X)
 
-%Pasos básicos del algoritmo obtenidos del libro Análisis Numérico de
-%Richard Burden, 2a. Edición, Grupo Editorial Iberoamérica.
+
 n=length(X(1,:));
 
 for i=1:n
