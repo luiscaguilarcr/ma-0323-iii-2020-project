@@ -18,3 +18,4 @@ function [y] = gauss_jordan (x)
     
     y = x(:,length(x))';
 end
+
