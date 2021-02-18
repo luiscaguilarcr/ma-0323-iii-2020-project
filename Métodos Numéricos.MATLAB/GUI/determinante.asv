@@ -16,11 +16,13 @@ function d = determinante(A)
             % Devuelva el mismo valor que la matriz
             d=A;
         else
-            % Indices en fila y columna pertenecientes al vector
+            % Toma el valor del vector diferente de 1
             vecf=vec(vec~=1);
+            
+            % Toma el valor del vector en la posicion j
             vecc=vec(vec~=j);
             
-            % Se implementa el algoritmo recursivo
+            % Multiplica recursivamente
             d(j)=((-1)^(1+j))*A(1,j)*determinante(A(vecf,vecc));
             
             % Suma todos los valores obtenidos en cada iteración del ciclo for
