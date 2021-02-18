@@ -1,7 +1,7 @@
 function [a,b,c,d]=TrazadoresCubicos
 x = [2 4 5 8 10];
 y = [5 6 9 5 4];
-u = 1;
+u = 0;
 v = 0;
 z = [2:0.01:10];
 %u,v son las pendientes de los extremos 
