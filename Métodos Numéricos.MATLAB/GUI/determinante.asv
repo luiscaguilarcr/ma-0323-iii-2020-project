@@ -19,7 +19,6 @@ function d = determinante(A)
             % Toma el valor del vector diferente de 1
             vecf=vec(vec~=1);
             
-            % Toma el valor del vector en la posicion j
             vecc=vec(vec~=j);
             
             % Multiplica recursivamente
