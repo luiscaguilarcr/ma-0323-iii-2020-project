@@ -1,0 +1,51 @@
+function [answer, error, h] = regla_compuesta_simpson(fx, funTemp, a, b, n)
+    % Regla Compuesta de Simpson
+    %
+    % Uso: [A] = regla_compuesta_simpson(fx, funTemp, a, b, n)
+    %
+    %   fx      es la función
+    %   funTemp es la funció
+    %   a       es 
+    %   b       es 
+    %   n       es 
+    
+    f = inline(fx);
+            derivada1=diff(funTemp);
+            derivada2=diff(derivada1);
+            derivada3=diff(derivada2);
+            derivada4=diff(derivada3);
+            set(handles.textArea_Derivada1,'String',sprintf('%s',derivada1));
+            set(handles.textArea_Derivada2,'String',sprintf('%s',derivada2));
+            set(handles.textArea_Derivada3,'String',sprintf('%s',derivada3));
+            set(handles.textArea_Derivada4,'String',sprintf('%s',derivada4));
+        
+            h=(b-a)/n;
+        
+            for k=1:1:n
+                x(k)=a+k*h;
+                y(k)=f(x(k));
+            end
+            so=0;se=0;
+            for k=1:1:n-1
+                if rem(k,2)==1
+                    so=so+y(k); % Suma pares
+                else
+                    se=se+y(k); % Suma impares
+                end
+            end
+            
+            % Convierte la derivada4 en expresion
+            gx = inline(derivada4);
+            
+            % Aplica formula del punto medio
+            puntoMedio= (a+b)/2; 
+            
+            %Evalua en la 4ta derivada el valor medio calculado
+            errorDerivada=gx(puntoMedio); 
+            
+            % Calcula el error
+            error=-((b-a)/180)*h^4*errorDerivada;
+
+            % Aplica la formula de la RCS
+            answer=h/3*(f(a)+f(b)+4*so+2*se);
+end
