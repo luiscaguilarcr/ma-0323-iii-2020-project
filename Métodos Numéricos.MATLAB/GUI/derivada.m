@@ -1,4 +1,4 @@
-function [derivada]=derivada(f)
+function [respuesta]=derivada(f)
 syms x h;
-derivada=limit((f(x+h)-f(x))/h,h,0);
+respuesta=limit((f(x+h)-f(x))/h,h,0);
 end
